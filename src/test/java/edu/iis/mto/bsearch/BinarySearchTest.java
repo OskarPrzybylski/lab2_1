@@ -68,4 +68,14 @@ public class BinarySearchTest {
 
         Assert.assertThat(result.isFound(), is(false));
     }
+
+    @Test
+    public void binarySearch_search_whenSegLengthIsMoreThenOne_andElementIsNextToTheMiddle(){
+        int[] seq = {0,2,7,8};
+        int key = 2;
+
+        SearchResult result = BinarySearch.search(key,seq);
+
+        Assert.assertThat(result.getPosition(), is(1));
+    }
 }
